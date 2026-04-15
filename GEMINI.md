@@ -1,35 +1,35 @@
-# Project Overview: paaharu-github-io
+# プロジェクト概要: paaharu-github-io
 
-This is a web project built with **Astro**, a modern web framework designed for content-driven websites. It is based on the [Astro Starter Kit: Basics](https://docs.astro.build/en/basics/project-structure/).
+このプロジェクトは、コンテンツ重視のウェブサイト向けに設計されたモダンなウェブフレームワークである **Astro** を使用して構築されています。[Astro Starter Kit: Basics](https://docs.astro.build/en/basics/project-structure/) をベースにしています。
 
-## Core Technologies
-- **Astro**: Main web framework (version 6.1.6).
-- **TypeScript**: Strict type-checking and modern JavaScript features.
-- **Node.js**: Requires version `^22.12.0`.
-- **Vanilla CSS**: Scoped styling within Astro components.
+## 主要技術
+- **Astro**: メインのウェブフレームワーク (version 6.1.6)
+- **TypeScript**: 厳格な型チェックとモダンなJavaScript機能
+- **Node.js**: 推奨バージョン `^22.12.0`
+- **Vanilla CSS**: Astroコンポーネント内でのスコープ付きスタイリング
 
-## Project Structure
-- `src/pages/`: Contains the routes of the website.
-- `src/components/`: Reusable Astro components.
-- `src/layouts/`: Common layouts for multiple pages.
-- `src/assets/`: Static assets such as images and fonts.
-- `public/`: Public files like favicons.
-- `astro.config.mjs`: Astro configuration file.
-- `tsconfig.json`: TypeScript configuration, extending Astro's strict rules.
+## プロジェクト構造
+- `src/pages/`: サイトのルート（ページ）が含まれます。
+- `src/components/`: 再利用可能なAstroコンポーネント。
+- `src/layouts/`: 複数のページで共通して使用されるレイアウト。
+- `src/assets/`: 画像やフォントなどの静的アセット。
+- `public/`: ファビコンなどの公開ファイル。
+- `astro.config.mjs`: Astroの設定ファイル。
+- `tsconfig.json`: TypeScriptの設定（Astroの厳格なルールを継承）。
 
-## Building and Running
-All commands should be executed from the project root:
+## ビルドと実行
+すべてのコマンドはプロジェクトのルートディレクトリで実行してください。
 
-| Command | Action |
+| コマンド | 内容 |
 | :--- | :--- |
-| `npm install` | Installs project dependencies. |
-| `npm run dev` | Starts a local development server at `localhost:4321`. |
-| `npm run build` | Compiles the production site into the `./dist/` folder. |
-| `npm run preview` | Previews the production build locally. |
-| `npm run astro ...` | Executes Astro CLI commands (e.g., `astro add`, `astro check`). |
+| `npm install` | プロジェクトの依存関係をインストールします。 |
+| `npm run dev` | ローカル開発サーバーを `localhost:4321` で起動します。 |
+| `npm run build` | 本番用サイトを `./dist/` フォルダにビルドします。 |
+| `npm run preview` | ビルドされた本番用サイトをローカルでプレビューします。 |
+| `npm run astro ...` | Astro CLIコマンド（例: `astro add`, `astro check`）を実行します。 |
 
-## Development Conventions
-- **Components**: Follow the [Astro component structure](https://docs.astro.build/en/basics/astro-components/) (Frontmatter for logic, HTML/JSX for structure, `<style>` for scoped CSS).
-- **Styling**: Prefer vanilla CSS scoped to components unless global styles are needed.
-- **Strict Mode**: The project uses `astro/tsconfigs/strict` for TypeScript, so ensure type safety and avoid using `any` when possible.
-- **Asset Handling**: Images should be placed in `src/assets/` if they need optimization by Astro, or `public/` for static hosting.
+## 開発コンポーネント
+- **コンポーネント**: [Astroコンポーネント構造](https://docs.astro.build/en/basics/astro-components/)に従ってください（ロジックはFrontmatter、構造はHTML/JSX、スタイルは`<style>`）。
+- **スタイリング**: グローバルスタイルが必要な場合を除き、コンポーネントにスコープされたVanilla CSSを推奨します。
+- **厳格モード**: `astro/tsconfigs/strict` を使用しているため、可能な限り型安全性を確保し、`any` の使用を避けてください。
+- **アセット管理**: Astroによる最適化が必要な画像は `src/assets/` に、そのまま配信する静的ファイルは `public/` に配置してください。
