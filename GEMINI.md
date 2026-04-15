@@ -28,8 +28,12 @@
 | `npm run preview` | ビルドされた本番用サイトをローカルでプレビューします。 |
 | `npm run astro ...` | Astro CLIコマンド（例: `astro add`, `astro check`）を実行します。 |
 
-## 開発コンポーネント
-- **コンポーネント**: [Astroコンポーネント構造](https://docs.astro.build/en/basics/astro-components/)に従ってください（ロジックはFrontmatter、構造はHTML/JSX、スタイルは`<style>`）。
-- **スタイリング**: グローバルスタイルが必要な場合を除き、コンポーネントにスコープされたVanilla CSSを推奨します。
-- **厳格モード**: `astro/tsconfigs/strict` を使用しているため、可能な限り型安全性を確保し、`any` の使用を避けてください。
-- **アセット管理**: Astroによる最適化が必要な画像は `src/assets/` に、そのまま配信する静的ファイルは `public/` に配置してください。
+## デザインシステム (Design System)
+本プロジェクトは、[design-rules](https://github.com/konoe-akitoshi/design-rules) に基づき、モダンで調和のとれたデザインを採用します。
+
+- **Spacing & Layout**: 4pt/8ptグリッドシステム（4px, 8px, 16px, 32px...）を厳守し、一貫したリズムを維持する。
+- **Typography & Geometry**: 黄金比を用いた比率調整や、視覚的に滑らかな「Squircle」形状の角丸を採用する。
+- **Color & Accessibility**: WCAG基準を満たすコントラストを確保し、包括的で読みやすいインターフェースとする。
+- **Interaction**: Fittsの法則に基づき、タッチターゲットは最小48ptとし、インタラクティブな要素間には最低8pxの余白を設ける。
+- **Visual Theory**: ゲシュタルト原則や光学補正を取り入れ、バランスの取れた professional なデザインを目指す。
+
