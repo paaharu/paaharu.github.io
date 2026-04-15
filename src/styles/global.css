@@ -1,0 +1,31 @@
+:root {
+  /* 4pt/8pt Grid System */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-32: 32px;
+  --space-64: 64px;
+
+  /* Colors */
+  --bg-color: #fdfdfd;
+  --text-color: #1a1a1a;
+  --accent-color: #333333;
+  --border-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
