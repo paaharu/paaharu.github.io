@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "プロジェクト名 1",
-    "description": "プロジェクトの概要をここに記載します。",
-    "tech": ["Astro", "TypeScript"],
-    "link": "#"
+    "title": "電早ラグビー部 公式サイト",
+    "description": "電気通信大学×早稲田大学理工ラグビー部の公式ウェブサイト。",
+    "tech": [],
+    "link": "https://densorugby-sudo.github.io/densorugby.github.io/"
   }
 ]

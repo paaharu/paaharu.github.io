@@ -22,4 +22,6 @@ body {
   font-family: "Nunito", "Zen Maru Gothic", sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
+  background: linear-gradient(160deg, #c9e8fb 0%, #e8f5fe 30%, #f5faff 60%, #fafcff 100%);
+  background-attachment: fixed;
 }
