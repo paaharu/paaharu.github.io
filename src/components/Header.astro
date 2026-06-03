@@ -1,12 +1,20 @@
+---
+const { pathname } = Astro.url;
+const isHome = pathname === "/" || pathname === "/index.html";
+---
+
 <header class="sticky top-0 z-50 bg-slate-50 border-b border-zinc-200">
-  <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+  <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2 hover:opacity-70 transition-opacity">
-      <img src="/mitokon.png" alt="アイコン" class="w-12 h-12 rounded-full object-cover border border-zinc-200" />
+      <img src="/mitokon.png" alt="アイコン" class="w-10 h-10 rounded-full object-cover border border-zinc-200" />
       <span class="font-semibold text-zinc-900 tracking-tight">paaru</span>
     </a>
-    <nav class="flex items-center gap-8">
-      <a href="/projects" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Works</a>
-      <a href="/about" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">About</a>
+    <nav class="flex items-center gap-6">
+      <a href="/" class={`text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all ${isHome ? 'border-b-2 border-[#5383c3]' : ''}`}>Top</a>
+      <a href="#works" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Works</a>
+      <a href="#articles" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Articles</a>
+      <a href="#links" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Links</a>
+      <a href="/about" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">About Me</a>
     </nav>
   </div>
 </header>

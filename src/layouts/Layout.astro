@@ -7,7 +7,7 @@ interface Props {
   title?: string;
 }
 
-const { title = 'paaharu' } = Astro.props;
+const { title = "Paaru's Home Page" } = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">
@@ -21,11 +21,45 @@ const { title = 'paaharu' } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
-  <body class="text-zinc-900 min-h-screen flex flex-col">
+  <body class="text-zinc-900 min-h-screen flex flex-col relative">
     <Header />
     <main class="flex-1">
       <slot />
     </main>
     <Footer />
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-12 right-12 p-3 bg-[#5383c3] text-white rounded-full shadow-lg opacity-0 invisible translate-y-4 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 z-50 group"
+      aria-label="Back to Top"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+      </svg>
+    </button>
+
+    <script>
+      const backToTop = document.getElementById('back-to-top');
+
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backToTop.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+            backToTop.classList.add('opacity-100', 'visible', 'translate-y-0');
+          } else {
+            backToTop.classList.add('opacity-0', 'invisible', 'translate-y-4');
+            backToTop.classList.remove('opacity-100', 'visible', 'translate-y-0');
+          }
+        });
+
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    </script>
   </body>
 </html>
