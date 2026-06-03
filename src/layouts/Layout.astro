@@ -44,7 +44,7 @@ const { title = "Paaru's Home Page" } = Astro.props;
 
       if (backToTop) {
         window.addEventListener('scroll', () => {
-          if (window.scrollY > 300) {
+          if (window.scrollY > 100) {
             backToTop.classList.remove('opacity-0', 'invisible', 'translate-y-4');
             backToTop.classList.add('opacity-100', 'visible', 'translate-y-0');
           } else {
