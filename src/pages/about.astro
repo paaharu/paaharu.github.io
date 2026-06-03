@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Me | paaru">
+  <div class="max-w-3xl mx-auto px-6 py-16 flex flex-col items-center gap-16 text-center">
+    
+    <!-- Profile -->
+    <section class="flex flex-col items-center gap-6">
+      <img
+        src="/mitokon.png"
+        alt="アイコン"
+        class="w-40 h-40 rounded-full object-cover border-2 border-zinc-100 shadow-sm"
+      />
+      <div class="grid gap-2">
+        <h1 class="text-3xl font-bold text-zinc-900">paaru</h1>
+        <p class="text-lg text-[#5383c3] font-medium">電気通信大学 2年 I類</p>
+        <p class="text-zinc-500 max-w-md leading-relaxed">
+          多趣味で色々なことに挑戦するのが好きです。
+          このサイトでは自分の作ったものや、日々の記録を残していきます。
+        </p>
+      </div>
+    </section>
+
+    <hr class="w-full border-zinc-200" />
+
+    <!-- Likes -->
+    <section class="w-full flex flex-col items-center gap-8">
+      <div class="relative inline-block">
+        <h2 class="text-2xl font-bold text-zinc-900">Likes</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-red-400 absolute -top-3 -right-4 -rotate-12 opacity-80">
+          <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001Z" />
+        </svg>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3">
+        {['プログラミング', 'デザイン', 'ラグビー', '音楽鑑賞', 'ガジェット'].map(item => (
+          <span class="px-4 py-2 bg-zinc-100 text-zinc-600 rounded-full text-sm font-medium">{item}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- Favorite Music -->
+    <section class="w-full flex flex-col items-center gap-8">
+      <div class="relative inline-block">
+        <h2 class="text-2xl font-bold text-zinc-900">Favorite Music</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-zinc-400 absolute -top-4 -right-5 rotate-12 opacity-80">
+          <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clip-rule="evenodd" />
+          <circle cx="12" cy="12" r="3" fill="white" />
+          <circle cx="12" cy="12" r="1" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="grid gap-4 w-full max-w-md">
+        <p class="text-zinc-500 italic">準備中...</p>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="w-full flex flex-col items-center gap-8">
+      <div class="relative inline-block">
+        <h2 class="text-2xl font-bold text-zinc-900">Timeline</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-7 h-7 text-zinc-400 absolute -top-4 -right-5 -rotate-6 opacity-80">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="relative w-full max-w-md">
+        <div class="absolute left-1/2 -translate-x-1/2 h-full w-px bg-zinc-200"></div>
+        <div class="grid gap-12 relative">
+          <div class="grid gap-2">
+            <div class="w-3 h-3 bg-[#5383c3] rounded-full mx-auto relative z-10 border-4 border-white shadow-sm"></div>
+            <p class="text-sm font-bold text-zinc-900">2026.04</p>
+            <p class="text-sm text-zinc-500">このポートフォリオサイトを公開</p>
+          </div>
+          <div class="grid gap-2">
+            <div class="w-3 h-3 bg-zinc-300 rounded-full mx-auto relative z-10 border-4 border-white shadow-sm"></div>
+            <p class="text-sm font-bold text-zinc-900">2025.04</p>
+            <p class="text-sm text-zinc-500">電気通信大学 入学</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>

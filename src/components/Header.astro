@@ -14,7 +14,7 @@ const isHome = pathname === "/" || pathname === "/index.html";
       <a href="#works" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Works</a>
       <a href="#articles" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Articles</a>
       <a href="#links" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">Links</a>
-      <a href="/about" class="text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all">About</a>
+      <a href="/about" class={`text-sm font-medium text-[#5383c3] hover:opacity-70 hover:-translate-y-0.5 transition-all ${pathname === '/about' ? 'border-b-2 border-[#5383c3]' : ''}`}>About</a>
     </nav>
   </div>
 </header>
